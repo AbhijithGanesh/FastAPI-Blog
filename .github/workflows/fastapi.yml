@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements/dev.txt
     - name: Run Tests
       run: |
-        python project/app/tests.py
+        python app/Mapper/Blogs/tests.py
