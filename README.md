@@ -1,5 +1,5 @@
 # FastAPI-Super-Blog-Site
-This repository contains the files for my Flask Blog site which will be a simple yet holistic blog site using a micro-database called SQLITE. 
+This repository contains the files for my FastAPI Blog site which will be a simple yet holistic blog site using a micro-database called SQLITE. 
 
 
 ## What is the idea behing this app?
