@@ -24,7 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'Blogs'
 ]
 
 MIDDLEWARE = [
@@ -37,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Mapper.urls'
+ROOT_URLCONF = 'Core.urls'
 
 TEMPLATES = [
     {
@@ -55,7 +56,6 @@ TEMPLATES = [
     },
 ]
 
-ASGI_APPLICATION = 'Mapper.asgi.application'
 
 
 DATABASES = {
