@@ -6,7 +6,7 @@ import os
 
 
 
-BASE_DIR = str(Path(__file__).resolve().parent.parent.parent)
+BASE_DIR = (Path(__file__).resolve().parent.parent.parent)
 
 
 
@@ -61,7 +61,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR + 'db.sqlite3',
+        'NAME': BASE_DIR / 'database/' / 'db.sqlite3',
     }
 }
 
