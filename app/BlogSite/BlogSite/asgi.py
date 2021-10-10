@@ -1,7 +1,5 @@
-from logging import debug
 import os
 from fastapi import FastAPI
-import uvicorn
 from django.conf import settings
 from fastapi.staticfiles import StaticFiles
 from starlette.staticfiles import StaticFiles
@@ -12,10 +10,11 @@ from pathlib import Path
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSite.settings')
 
 
-from logic.routes import posts_fetcher
+from Logic.routers import get_posts
 
 
-DESIGN_DIR = Path(__file__).resolve().parent.parent / "design/static"
+
+DESIGN_DIR = str(Path(__file__).resolve().parent.parent.parent) + "\design\static"
 app = get_asgi_application()
 
 if settings.MOUNT_DJANGO:
@@ -28,5 +27,4 @@ if settings.MOUNT_DJANGO:
 else:  
     fastapi = FastAPI()
 
-fastapi.include_router(posts_fetcher, prefix = "/posts")
-
+fastapi.include_router(get_posts, prefix = "/posts")
