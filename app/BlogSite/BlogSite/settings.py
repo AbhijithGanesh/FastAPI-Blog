@@ -4,6 +4,7 @@ from dotenv import dotenv_values
 
 
 config = dotenv_values('.env')
+print(config)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -82,3 +83,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MOUNT_DJANGO = True

@@ -15,6 +15,7 @@ Ignore
 
 # Distribution / packaging
 .Python
+Ignore
 Scripts
 VirtualEnv
 build/
