@@ -11,6 +11,7 @@ __pycache__/
 
 my_app
 node_modules
+Ignore
 
 # Distribution / packaging
 .Python
