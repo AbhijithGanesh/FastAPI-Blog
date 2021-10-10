@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements/dev.txt
     - name: Run Tests
       run: |
-        python \app\BlogSite\logic\tests.py
+        python ./app/BlogSite/logic/tests.py
