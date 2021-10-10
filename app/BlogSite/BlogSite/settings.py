@@ -4,7 +4,6 @@ from dotenv import dotenv_values
 
 
 config = dotenv_values('.env')
-print(config)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'logic'
+    'Logic'
 ]
 
 MIDDLEWARE = [
