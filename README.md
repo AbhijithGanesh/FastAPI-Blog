@@ -30,6 +30,8 @@ source activate
 
 #Come back to the root of this project's repository using cd 
 pip install -r requirements/dev.txt
-uvicorn API.Core.asgi:application --reload
+uvicorn BlogSite.asgi:application --reload
+
+#Please read the directory docs in the docs folder to clear your issues related to Uvicorn and Path resolution
 ```
 
