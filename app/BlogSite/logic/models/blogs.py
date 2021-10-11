@@ -13,6 +13,6 @@ class BlogTable(models.Model):
     SubTitle = models.CharField(
         max_length=255, default="No SubTitle", null=False, blank=False
     )
-    Date_of_creation = models.DateTimeField(auto_created=True)
+    Date_of_creation = models.DateTimeField(auto_now_add=True)
     Content = models.TextField()
     URL = models.URLField()
