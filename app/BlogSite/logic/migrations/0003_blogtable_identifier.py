@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('logic', '0002_blogtable_uuid'),
+        ("logic", "0002_blogtable_uuid"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='blogtable',
-            name='Identifier',
-            field=models.CharField(default='No SEO Optimized tag', max_length=140),
+            model_name="blogtable",
+            name="Identifier",
+            field=models.CharField(default="No SEO Optimized tag", max_length=140),
         ),
     ]

@@ -1,4 +1,3 @@
 from .blogs import BlogTable
-__all__ = (
-    'BlogTable'
-)
+
+__all__ = "BlogTable"

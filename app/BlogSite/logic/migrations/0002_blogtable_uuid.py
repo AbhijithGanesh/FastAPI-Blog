@@ -7,13 +7,13 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('logic', '0001_initial'),
+        ("logic", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='blogtable',
-            name='UUID',
+            model_name="blogtable",
+            name="UUID",
             field=models.UUIDField(default=uuid.uuid4, editable=False),
         ),
     ]
