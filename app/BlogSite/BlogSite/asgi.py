@@ -10,10 +10,11 @@ from pathlib import Path
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BlogSite.settings")
 
 
-from Logic.routers import get_posts
+from Logic.routers import get_posts, template_router
 
 
 DESIGN_DIR = str(Path(__file__).resolve().parent.parent.parent) + "\design\static"
+
 app = get_asgi_application()
 
 if settings.MOUNT_DJANGO:
@@ -27,3 +28,4 @@ else:
     fastapi = FastAPI()
 
 fastapi.include_router(get_posts, prefix="/posts")
+fastapi.include_router(template_router, prefix="/templates")

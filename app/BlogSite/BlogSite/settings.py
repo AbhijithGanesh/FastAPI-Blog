@@ -1,9 +1,10 @@
 from pathlib import Path
 import os
-from dotenv import dotenv_values
+from dotenv import load_dotenv,dotenv_values
 
+if load_dotenv(".env"):
+    config = dotenv_values(".env")
 
-config = dotenv_values(".env")
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
