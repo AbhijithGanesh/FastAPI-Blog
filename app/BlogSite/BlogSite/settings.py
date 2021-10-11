@@ -5,7 +5,7 @@ from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
@@ -14,13 +14,14 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    "Logic.apps.LogicConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "Logic",
+    
 ]
 
 MIDDLEWARE = [
