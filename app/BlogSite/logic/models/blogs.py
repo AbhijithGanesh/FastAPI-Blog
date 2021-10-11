@@ -18,14 +18,28 @@ class BlogTable(models.Model):
     Content = models.TextField()
     URL = models.URLField()
 
+
 class AbstractUser(models.Model):
     reference = models.ForeignKey(User, on_delete=models.CASCADE)
 
+
 class Socials(AbstractUser):
-    GitHub = models.CharField(max_length = 100, blank = True, null = True, default="No GitHub UserName specifiied" )
-    Instagram = models.CharField(max_length = 100,  blank = True, null = True, default="No Instagram UserName specifiied" )
-    Twitter = models.CharField(max_length = 100,  blank = True, null = True, default="No Twitter UserName specifiied" )
-    LinkedIn = models.CharField(max_length = 100,  blank = True, null = True, default="No LinkedIn UserName specifiied" )
-    YouTube = models.CharField(max_length = 100,  blank = True, null = True, default="No YouTube UserName specifiied" )
+    GitHub = models.CharField(
+        max_length=100, blank=True, null=True, default="No GitHub UserName specifiied"
+    )
+    Instagram = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True,
+        default="No Instagram UserName specifiied",
+    )
+    Twitter = models.CharField(
+        max_length=100, blank=True, null=True, default="No Twitter UserName specifiied"
+    )
+    LinkedIn = models.CharField(
+        max_length=100, blank=True, null=True, default="No LinkedIn UserName specifiied"
+    )
+    YouTube = models.CharField(
+        max_length=100, blank=True, null=True, default="No YouTube UserName specifiied"
+    )
     Website = models.URLField()
-    
