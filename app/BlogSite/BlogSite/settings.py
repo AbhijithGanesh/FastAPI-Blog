@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv,dotenv_values
+from dotenv import load_dotenv, dotenv_values
 
 if load_dotenv(".env"):
     config = dotenv_values(".env")
@@ -22,7 +22,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
 ]
 
 MIDDLEWARE = [
