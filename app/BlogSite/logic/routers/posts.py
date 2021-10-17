@@ -18,3 +18,7 @@ def query_posts(post_id: str):
 
     query = BlogTable.objects.get(Identifier=post_id)
     return [query]
+
+@posts_fetcher.post("/post/{Title}")
+def post_obj(Title: str):
+    ...
