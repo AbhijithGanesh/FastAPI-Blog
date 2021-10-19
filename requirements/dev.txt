@@ -1,5 +1,5 @@
 aiofiles==0.7.0
-aiohttp==3.7.4
+aiohttp==3.7.4.post0
 aiosqlite==0.17.0
 aniso8601==9.0.1
 antiorm==1.2.1

@@ -1,0 +1,17 @@
+version: "3.9"
+
+services: 
+  api:
+    image: fastapi-blog
+    container_name: Fastapi_Blows
+    environment:
+      - SECRET_KEY=sibfpauipbauabrbggpbruiebpagubpabruapuparuip
+    
+    #commands which will be executed
+    command: python3 manage.py migrate
+    command: python3 manage.py collectstatic
+    command: uvicorn BlogSite.asgi:fastapi --proxy-headers --host 0.0.0.0 --port 8080
+
+    #ports that would be exposed
+    ports:
+       - 8080:8080
