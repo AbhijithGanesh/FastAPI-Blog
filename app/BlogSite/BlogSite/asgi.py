@@ -14,7 +14,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BlogSite.settings")
 from Logic.routers import get_posts, template_router
 
 
-DESIGN_DIR = str(Path(__file__).resolve().parent.parent.parent) + "\design\static"
+DESIGN_DIR = str(Path(__file__).resolve().parent.parent.parent) + str(Path(r"/design/static"))
 
 app = get_asgi_application()
 
