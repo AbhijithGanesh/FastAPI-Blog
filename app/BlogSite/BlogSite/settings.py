@@ -3,12 +3,12 @@ import os
 from dotenv import load_dotenv, dotenv_values
 
 if load_dotenv(".env"):
-    config = dotenv_values(".env")
+    config = dict(dotenv_values(".env"))
 
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config["SECRET_KEY"]
 
 DEBUG = True
 
