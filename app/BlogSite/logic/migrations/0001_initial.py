@@ -8,21 +8,31 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='BlogTable',
+            name="BlogTable",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Date_of_creation', models.DateTimeField(auto_created=True)),
-                ('Title', models.CharField(default='No Title', max_length=255)),
-                ('Identifier', models.CharField(default='No SEO Optimized tag', max_length=140)),
-                ('UUID', models.UUIDField(default=uuid.uuid4, editable=False)),
-                ('SubTitle', models.CharField(default='No SubTitle', max_length=255)),
-                ('Content', models.TextField()),
-                ('URL', models.URLField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("Date_of_creation", models.DateTimeField(auto_created=True)),
+                ("Title", models.CharField(default="No Title", max_length=255)),
+                (
+                    "Identifier",
+                    models.CharField(default="No SEO Optimized tag", max_length=140),
+                ),
+                ("UUID", models.UUIDField(default=uuid.uuid4, editable=False)),
+                ("SubTitle", models.CharField(default="No SubTitle", max_length=255)),
+                ("Content", models.TextField()),
+                ("URL", models.URLField()),
             ],
         ),
     ]
