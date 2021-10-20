@@ -1,3 +1,2 @@
-from .blogs import BlogTable
+from .blogs import BlogTable as BlogTable
 
-__all__ = "BlogTable"
