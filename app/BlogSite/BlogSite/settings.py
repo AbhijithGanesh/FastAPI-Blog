@@ -8,7 +8,7 @@ if load_dotenv(".env"):
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-SECRET_KEY = config["SECRET_KEY"]
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = True
 

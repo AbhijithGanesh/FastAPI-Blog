@@ -49,4 +49,4 @@ def get_logo():
 
 fastapi.include_router(get_posts, prefix="/posts")
 fastapi.include_router(template_router, prefix="/templates")
-fastapi.include_router(user_router, prefix = "/users/")
+fastapi.include_router(user_router, prefix = "/users")
