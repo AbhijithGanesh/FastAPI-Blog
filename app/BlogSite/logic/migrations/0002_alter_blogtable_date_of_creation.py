@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Logic', '0001_initial'),
+        ("Logic", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='blogtable',
-            name='Date_of_creation',
+            model_name="blogtable",
+            name="Date_of_creation",
             field=models.DateTimeField(auto_now_add=True),
         ),
     ]
