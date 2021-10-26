@@ -34,4 +34,5 @@ def query_posts(post_id: str):
 def post_obj(Title: str, item: Blog):
     from Logic.models import BlogTable
     val = BlogTable(**dict(item))
-    return val
+    if val:
+        val.save()
