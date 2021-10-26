@@ -1,17 +1,20 @@
+from datetime import datetime
 from typing import Text
 from fastapi import APIRouter
 from pydantic import BaseModel, AnyHttpUrl
-import uuid
-from datetime import date
+from fastapi.responses import HTMLResponse
+import pytz
 
 posts_fetcher = APIRouter()
+India = pytz.timezone("Asia/Calcutta")
+
 
 class Blog(BaseModel):
     id: int
     Title: str
     Identifier: Text
     SubTitle: str
-    # Date_of_creation: date
+    Date_of_creation: datetime
     Content: str
     URL: AnyHttpUrl
 
@@ -35,4 +38,15 @@ def post_obj(Title: str, item: Blog):
     from Logic.models import BlogTable
     val = BlogTable(**dict(item))
     if val:
+        html = '''
+        <html>
+        <head>
+            <title>HTTP Response</title>
+        </head>
+        <body>
+            <h1>Saved successfully</h1>
+        </body>
+        </html>
+        '''
         val.save()
+        return HTMLResponse(content=html, status_code=200)
