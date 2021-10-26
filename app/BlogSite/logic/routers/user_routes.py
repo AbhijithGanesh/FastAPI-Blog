@@ -23,6 +23,7 @@ def login(request: Request, credentials: HTTPBasicCredentials = Depends(security
     if user and request.method == "POST":
         return request.headers
 
+
 @user_router.get("/users/me")
 async def read_users_me(request: Request):
     return request.user

@@ -23,19 +23,17 @@ DESIGN_DIR = str(Path(__file__).resolve().parent.parent.parent) + str(
 
 app = get_asgi_application()
 
-middleware = [
-    Middleware(AuthenticationMiddleware, backend=BasicAuthBackend())
-]
+middleware = [Middleware(AuthenticationMiddleware, backend=BasicAuthBackend())]
 
 if settings.MOUNT_DJANGO:
     routes: list = [
         Mount("/Master-Application", app),
         Mount("/static", StaticFiles(directory=DESIGN_DIR), name="static"),
     ]
-    fastapi = FastAPI(routes=routes, middleware = middleware)
+    fastapi = FastAPI(routes=routes, middleware=middleware)
 
 else:
-    fastapi = FastAPI(middleware = middleware)
+    fastapi = FastAPI(middleware=middleware)
 
 
 @fastapi.get("/favicon.ico")
@@ -49,4 +47,4 @@ def get_logo():
 
 fastapi.include_router(get_posts, prefix="/posts")
 fastapi.include_router(template_router, prefix="/templates")
-fastapi.include_router(user_router, prefix = "/users")
+fastapi.include_router(user_router, prefix="/users")
